@@ -136,18 +136,25 @@ button{
     </style>
 </head>
 <body>
+    
+    <?php
+        if(isset($_GET['Error'])):
+    ?>
+    <?php
+    endif;?>
+
     <div class="background">
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form>
+    <form method = "POST" action = "loginAction.php">
         <h3>Login Here</h3>
 
         <label for="username">Username</label>
-        <input type="text" placeholder="Email or Phone" id="username">
+        <input type="email" placeholder="Email or Phone" id="email" name ="email">
 
         <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password">
+        <input type="password" placeholder="Password" id="password" name="password">
 
         <button>Log In</button>
         <div class="social">
